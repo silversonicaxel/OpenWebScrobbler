@@ -1,7 +1,5 @@
 export type AvatarSizes = 'xl' | 'lg' | 'md' | 'sm';
 
 export type Avatar =
-  | {
-      [key in AvatarSizes]: string;
-    }
+  | Record<AvatarSizes, string>
   | null;
