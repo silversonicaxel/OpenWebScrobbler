@@ -1,13 +1,12 @@
-import { useNavigate } from 'react-router-dom';
-import { useQueryClient } from '@tanstack/react-query';
-
-import { Row, Button } from 'reactstrap';
-import { Trans, useTranslation } from 'react-i18next';
 import { faChevronLeft, faUserFriends } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { useQueryClient } from '@tanstack/react-query';
 import SearchForm from 'components/SearchForm';
+import { Trans, useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+import { Row, Button } from 'reactstrap';
 import { usernameIsValid } from 'utils/common';
+
 
 export function UserResultsHeading({ isLoading, userToSearch }: { isLoading: boolean; userToSearch: string }) {
   const navigate = useNavigate();
